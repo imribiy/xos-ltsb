@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>11/29/2021 21:01:06</Date>
+	<AppInfo>
+		<Version>2.3.2.8502</Version>
+		<Licensed>Yes</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro (21H2) x64 - 10.0.19044.1320 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Enterprise 2016 LTSB (1607) x64 - 10.0.14393.0 (en-US)</Version>
+		<GUID>{46AB3FBD-7D0E-4865-8420-D2FEA56A86A0}</GUID>
+	</ImageInfo>
+	<RemoveComponents></RemoveComponents>
+	<Compatibility protectHidden="true">
+		<ComponentFeatures>
+			<Feature enabled="no">CapFrameX</Feature>
+			<Feature enabled="yes">Discord</Feature>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">Netflix</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">Scanning</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">ShellSearchSupport</Feature>
+			<Feature enabled="yes">Spotify</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+			<Feature enabled="yes">TeamViewer</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">WindowsStore</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features></Features>
+	<Packages>
+		<File>D:\NTLite\Updates\10.1607.x64\windows10.0-kb5005698-x64_ff882b0a9dccc0c3f52673ba3ecf4a2a3b2386ca.msu</File>
+		<File>D:\NTLite\Updates\10.1607.x64\windows10.0-kb5008601-x64_c0fddabd5b9698548d741effbdfd03a4f2440ba2.msu</File>
+		<File>C:\Users\emre\Desktop\en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483\Sources\Sxs\microsoft-windows-netfx3-ondemand-package.cab</File>
+		<File>D:\NTLite\Updates\10.1607.x64\Windows10.0-KB4486129-x64.cab</File>
+	</Packages>
+	<Commands>
+		<PostUpdates>
+			<!--<Command>example [MOUNTDIR]\Windows parameters</Command>-->
+		</PostUpdates>
+	</Commands>
+	<Drivers showHidden="true">
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1c63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS64\e1c64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS65\e1c65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1d63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS64\e1d64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS65\e1d65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS68\e1d68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1e6232e.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1k63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1q63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1r63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS64\e1r64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS65\e1r65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS68\e1r68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1s63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS64\e1s64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS65\e1s65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS68\e1s68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\e1y62x64.inf</File>
+		<File>D:\ISO\Drivers\DRV_LAN_Intel_I225_UWD_TP_W10_64_V1014_20200507R\e2f68.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO2500\Winx64\NDIS68\e2f68.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS63\i40ea63.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS64\i40ea64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS65\i40ea65.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS68\i40ea68.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS64\i40eb64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS65\i40eb65.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO40GB\Winx64\NDIS68\i40eb68.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROCGB\Winx64\NDIS65\icea65.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROCGB\Winx64\NDIS68\icea68.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\ixe62x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\ixn63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS64\ixn64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS65\ixn65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS68\ixn68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\ixs63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS64\ixs64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS65\ixs65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS68\ixs68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\ixt63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS64\ixt64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS65\ixt65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS68\ixt68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\sxa63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS64\sxa64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS65\sxa65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS68\sxa68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS63\sxb63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS64\sxb64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS65\sxb65x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PROXGB\Winx64\NDIS68\sxb68x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS63\v1q63x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS64\v1q64x64.inf</File>
+		<File>D:\ISO\Drivers\Intel\Wired_driver_26.4_x64\PRO1000\Winx64\NDIS65\v1q65x64.inf</File>
+		<File>D:\ISO\Drivers\XBOXONE\xb1usb.inf</File>
+		<File>D:\ISO\Drivers\Qualcomm Altheros QCA9377\netathr10x.inf</File>
+		<File>D:\ISO\Drivers\realtek other\64\rt630x64.inf</File>
+		<File>D:\ISO\Drivers\64\rt640x64.inf</File>
+	</Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<EditionPrompt>false</EditionPrompt>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/INDEX</Key>
+								<Value>1</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings></Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+		<ScheduledTasks></ScheduledTasks>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveTrim</Task>
+			<Task>deledition_boot.wim_01_9_64</Task>
+			<Task>imageFormatWim</Task>
+			<Task>imageOptionsDontBackupPresetLog</Task>
+			<Task>imageOptionsCreateIso</Task>
+		</ImageTasks>
+		<AutoIsoFile>E:\ISOs\MSDN\ltsb-updated-driversintegrated.iso</AutoIsoFile>
+		<AutoIsoLabel>xos</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>3</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove></Remove>
+		<Change></Change>
+		<Add></Add>
+	</Execution>
+	<Registry></Registry>
+</Preset>

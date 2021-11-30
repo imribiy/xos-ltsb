@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>11/29/2021 21:30:16</Date>
+	<AppInfo>
+		<Version>2.3.2.8502</Version>
+		<Licensed>Yes</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro (21H2) x64 - 10.0.19044.1320 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Enterprise 2016 LTSB (1607) x64 - 10.0.14393.4771 (en-US)</Version>
+		<GUID>{1624D8E3-3EF5-47DE-A313-7CBA8E47663B}</GUID>
+	</ImageInfo>
+	<RemoveComponents></RemoveComponents>
+	<Compatibility protectHidden="true">
+		<ComponentFeatures>
+			<Feature enabled="no">CapFrameX</Feature>
+			<Feature enabled="yes">Discord</Feature>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">Netflix</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">Scanning</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">ShellSearchSupport</Feature>
+			<Feature enabled="yes">Spotify</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+			<Feature enabled="yes">TeamViewer</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">WindowsStore</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features></Features>
+	<Packages></Packages>
+	<Commands>
+		<PostUpdates>
+			<!--<Command>example [MOUNTDIR]\Windows parameters</Command>-->
+		</PostUpdates>
+	</Commands>
+	<Drivers showHidden="true"></Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<EditionPrompt>false</EditionPrompt>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/INDEX</Key>
+								<Value>1</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings></Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+		<ScheduledTasks>
+			<TweakGroup name="Tree\Microsoft\Windows\.NET Framework">
+				<Tweak name=".NET Framework NGEN v4.0.30319\.NET Framework NGEN v4.0.30319">remove</Tweak>
+				<Tweak name=".NET Framework NGEN v4.0.30319 64\.NET Framework NGEN v4.0.30319 64">remove</Tweak>
+				<Tweak name=".NET Framework NGEN v4.0.30319 64 Critical\.NET Framework NGEN v4.0.30319 64 Critical">remove</Tweak>
+				<Tweak name=".NET Framework NGEN v4.0.30319 Critical\.NET Framework NGEN v4.0.30319 Critical">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Active Directory Rights Management Services Client">
+				<Tweak name="AD RMS Rights Policy Template Management (Automated)\AD RMS Rights Policy Template Management (Automated)">remove</Tweak>
+				<Tweak name="AD RMS Rights Policy Template Management (Manual)\AD RMS Rights Policy Template Management (Manual)">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\AppID">
+				<Tweak name="EDP Policy Manager\EDP Policy Manager">remove</Tweak>
+				<Tweak name="PolicyConverter\PolicyConverter">remove</Tweak>
+				<Tweak name="SmartScreenSpecific\SmartScreenSpecific">remove</Tweak>
+				<Tweak name="VerifiedPublisherCertStoreCheck\VerifiedPublisherCertStoreCheck">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Application Experience">
+				<Tweak name="AitAgent\AitAgent">remove</Tweak>
+				<Tweak name="Microsoft Compatibility Appraiser\Microsoft Compatibility Appraiser">remove</Tweak>
+				<Tweak name="ProgramDataUpdater\ProgramDataUpdater">remove</Tweak>
+				<Tweak name="StartupAppTask\StartupAppTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\ApplicationData">
+				<Tweak name="appuriverifierdaily\appuriverifierdaily">remove</Tweak>
+				<Tweak name="appuriverifierinstall\appuriverifierinstall">remove</Tweak>
+				<Tweak name="CleanupTemporaryState\CleanupTemporaryState">remove</Tweak>
+				<Tweak name="DsSvcCleanup\DsSvcCleanup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\AppxDeploymentClient">
+				<Tweak name="Pre-staged app cleanup\Pre-staged app cleanup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Autochk">
+				<Tweak name="Proxy\Proxy">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Bluetooth">
+				<Tweak name="UninstallDeviceTask\UninstallDeviceTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\CertificateServicesClient">
+				<Tweak name="AikCertEnrollTask\AikCertEnrollTask">remove</Tweak>
+				<Tweak name="CryptoPolicyTask\CryptoPolicyTask">remove</Tweak>
+				<Tweak name="KeyPreGenTask\KeyPreGenTask">remove</Tweak>
+				<Tweak name="SystemTask\SystemTask">remove</Tweak>
+				<Tweak name="UserTask\UserTask">remove</Tweak>
+				<Tweak name="UserTask-Roam\UserTask-Roam">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Chkdsk">
+				<Tweak name="ProactiveScan\ProactiveScan">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Clip">
+				<Tweak name="License Validation\License Validation">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\CloudExperienceHost">
+				<Tweak name="CreateObjectTask\CreateObjectTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Customer Experience Improvement Program">
+				<Tweak name="Consolidator\Consolidator">remove</Tweak>
+				<Tweak name="KernelCeipTask\KernelCeipTask">remove</Tweak>
+				<Tweak name="UsbCeip\UsbCeip">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Data Integrity Scan">
+				<Tweak name="Data Integrity Scan\Data Integrity Scan">remove</Tweak>
+				<Tweak name="Data Integrity Scan for Crash Recovery\Data Integrity Scan for Crash Recovery">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Defrag">
+				<Tweak name="ScheduledDefrag\ScheduledDefrag">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Device Information">
+				<Tweak name="Device\Device">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Device Setup">
+				<Tweak name="Metadata Refresh\Metadata Refresh">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\DeviceDirectoryClient">
+				<Tweak name="HandleCommand\HandleCommand">remove</Tweak>
+				<Tweak name="HandleWnsCommand\HandleWnsCommand">remove</Tweak>
+				<Tweak name="IntegrityCheck\IntegrityCheck">remove</Tweak>
+				<Tweak name="LocateCommandUserSession\LocateCommandUserSession">remove</Tweak>
+				<Tweak name="RegisterDeviceAccountChange\RegisterDeviceAccountChange">remove</Tweak>
+				<Tweak name="RegisterDeviceConnectedToNetwork\RegisterDeviceConnectedToNetwork">remove</Tweak>
+				<Tweak name="RegisterDeviceLocationRightsChange\RegisterDeviceLocationRightsChange">remove</Tweak>
+				<Tweak name="RegisterDevicePeriodic1\RegisterDevicePeriodic1">remove</Tweak>
+				<Tweak name="RegisterDevicePeriodic24\RegisterDevicePeriodic24">remove</Tweak>
+				<Tweak name="RegisterDevicePeriodic6\RegisterDevicePeriodic6">remove</Tweak>
+				<Tweak name="RegisterDevicePolicyChange\RegisterDevicePolicyChange">remove</Tweak>
+				<Tweak name="RegisterDeviceScreenOnOff\RegisterDeviceScreenOnOff">remove</Tweak>
+				<Tweak name="RegisterDeviceSettingChange\RegisterDeviceSettingChange">remove</Tweak>
+				<Tweak name="RegisterUserDevice\RegisterUserDevice">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Diagnosis">
+				<Tweak name="Scheduled\Scheduled">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\DiskCleanup">
+				<Tweak name="SilentCleanup\SilentCleanup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\DiskDiagnostic">
+				<Tweak name="Microsoft-Windows-DiskDiagnosticDataCollector\Microsoft-Windows-DiskDiagnosticDataCollector">remove</Tweak>
+				<Tweak name="Microsoft-Windows-DiskDiagnosticResolver\Microsoft-Windows-DiskDiagnosticResolver">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\DiskFootprint">
+				<Tweak name="Diagnostics\Diagnostics">remove</Tweak>
+				<Tweak name="StorageSense\StorageSense">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\DUSM">
+				<Tweak name="dusmtask\dusmtask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\EDP">
+				<Tweak name="EDP App Launch Task\EDP App Launch Task">remove</Tweak>
+				<Tweak name="EDP Auth Task\EDP Auth Task">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\EnterpriseMgmt">
+				<Tweak name="MDMMaintenenceTask\MDMMaintenenceTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\ErrorDetails">
+				<Tweak name="EnableErrorDetailsUpdate\EnableErrorDetailsUpdate">remove</Tweak>
+				<Tweak name="ErrorDetailsUpdate\ErrorDetailsUpdate">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\File Classification Infrastructure">
+				<Tweak name="Property Definition Sync\Property Definition Sync">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\FileHistory">
+				<Tweak name="File History (maintenance mode)\File History (maintenance mode)">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\LanguageComponentsInstaller">
+				<Tweak name="Installation\Installation">remove</Tweak>
+				<Tweak name="Uninstallation\Uninstallation">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\License Manager">
+				<Tweak name="TempSignedLicenseExchange\TempSignedLicenseExchange">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Location">
+				<Tweak name="Notifications\Notifications">remove</Tweak>
+				<Tweak name="WindowsActionDialog\WindowsActionDialog">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Maintenance">
+				<Tweak name="WinSAT\WinSAT">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Maps">
+				<Tweak name="MapsToastTask\MapsToastTask">remove</Tweak>
+				<Tweak name="MapsUpdateTask\MapsUpdateTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\MemoryDiagnostic">
+				<Tweak name="CorruptionDetector\CorruptionDetector">remove</Tweak>
+				<Tweak name="DecompressionFailureDetector\DecompressionFailureDetector">remove</Tweak>
+				<Tweak name="MemUsageTask\MemUsageTask">remove</Tweak>
+				<Tweak name="ProcessMemoryDiagnosticEvents\ProcessMemoryDiagnosticEvents">remove</Tweak>
+				<Tweak name="RunFullMemoryDiagnostic\RunFullMemoryDiagnostic">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Mobile Broadband Accounts">
+				<Tweak name="MNO Metadata Parser\MNO Metadata Parser">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\MUI">
+				<Tweak name="LPRemove\LPRemove">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Multimedia">
+				<Tweak name="SystemSoundsService\SystemSoundsService">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\NetTrace">
+				<Tweak name="GatherNetworkInfo\GatherNetworkInfo">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\NlaSvc">
+				<Tweak name="WiFiTask\WiFiTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Offline Files">
+				<Tweak name="Background Synchronization\Background Synchronization">remove</Tweak>
+				<Tweak name="Logon Synchronization\Logon Synchronization">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\PI">
+				<Tweak name="Secure-Boot-Update\Secure-Boot-Update">remove</Tweak>
+				<Tweak name="Sqm-Tasks\Sqm-Tasks">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Plug and Play">
+				<Tweak name="Device Install Group Policy\Device Install Group Policy">remove</Tweak>
+				<Tweak name="Device Install Reboot Required\Device Install Reboot Required">remove</Tweak>
+				<Tweak name="Plug and Play Cleanup\Plug and Play Cleanup">remove</Tweak>
+				<Tweak name="Sysprep Generalize Drivers\Sysprep Generalize Drivers">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Power Efficiency Diagnostics">
+				<Tweak name="AnalyzeSystem\AnalyzeSystem">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Management\Provisioning">
+				<Tweak name="Logon\Logon">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Ras">
+				<Tweak name="MobilityManager\MobilityManager">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\RecoveryEnvironment">
+				<Tweak name="VerifyWinRE\VerifyWinRE">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Registry">
+				<Tweak name="RegIdleBackup\RegIdleBackup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\RemoteAssistance">
+				<Tweak name="RemoteAssistanceTask\RemoteAssistanceTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Live\Roaming">
+				<Tweak name="MaintenanceTask\MaintenanceTask">remove</Tweak>
+				<Tweak name="SynchronizeWithStorage\SynchronizeWithStorage">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Servicing">
+				<Tweak name="StartComponentCleanup\StartComponentCleanup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\SettingSync">
+				<Tweak name="BackgroundUploadTask\BackgroundUploadTask">remove</Tweak>
+				<Tweak name="BackupTask\BackupTask">remove</Tweak>
+				<Tweak name="NetworkStateChangeTask\NetworkStateChangeTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Setup">
+				<Tweak name="SetupCleanupTask\SetupCleanupTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\SharedPC">
+				<Tweak name="Account Cleanup\Account Cleanup">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Shell">
+				<Tweak name="CrawlStartPages\CrawlStartPages">remove</Tweak>
+				<Tweak name="CreateObjectTask\CreateObjectTask">remove</Tweak>
+				<Tweak name="FamilySafetyMonitor\FamilySafetyMonitor">remove</Tweak>
+				<Tweak name="FamilySafetyMonitorToastTask\FamilySafetyMonitorToastTask">remove</Tweak>
+				<Tweak name="FamilySafetyRefresh\FamilySafetyRefresh">remove</Tweak>
+				<Tweak name="FamilySafetyRefreshTask\FamilySafetyRefreshTask">remove</Tweak>
+				<Tweak name="IndexerAutomaticMaintenance\IndexerAutomaticMaintenance">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Feedback\Siuf">
+				<Tweak name="DmClient\DmClient">remove</Tweak>
+				<Tweak name="DmClientOnScenarioDownload\DmClientOnScenarioDownload">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\SoftwareProtectionPlatform">
+				<Tweak name="SvcRestartTask\SvcRestartTask">remove</Tweak>
+				<Tweak name="SvcRestartTaskLogon\SvcRestartTaskLogon">remove</Tweak>
+				<Tweak name="SvcRestartTaskNetwork\SvcRestartTaskNetwork">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\SpacePort">
+				<Tweak name="SpaceAgentTask\SpaceAgentTask">remove</Tweak>
+				<Tweak name="SpaceManagerTask\SpaceManagerTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Speech">
+				<Tweak name="SpeechModelDownloadTask\SpeechModelDownloadTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Storage Tiers Management">
+				<Tweak name="Storage Tiers Management Initialization\Storage Tiers Management Initialization">remove</Tweak>
+				<Tweak name="Storage Tiers Optimization\Storage Tiers Optimization">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Sysmain">
+				<Tweak name="HybridDriveCachePrepopulate\HybridDriveCachePrepopulate">remove</Tweak>
+				<Tweak name="HybridDriveCacheRebalance\HybridDriveCacheRebalance">remove</Tweak>
+				<Tweak name="ResPriStaticDbSync\ResPriStaticDbSync">remove</Tweak>
+				<Tweak name="WsSwapAssessmentTask\WsSwapAssessmentTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\PLA\System">
+				<Tweak name="ConvertLogEntries\ConvertLogEntries">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\SystemRestore">
+				<Tweak name="SR\SR">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Task Manager">
+				<Tweak name="Interactive\Interactive">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\TaskScheduler">
+				<Tweak name="Idle Maintenance\Idle Maintenance">remove</Tweak>
+				<Tweak name="Maintenance Configurator\Maintenance Configurator">remove</Tweak>
+				<Tweak name="Manual Maintenance\Manual Maintenance">remove</Tweak>
+				<Tweak name="Regular Maintenance\Regular Maintenance">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\TextServicesFramework">
+				<Tweak name="MsCtfMonitor\MsCtfMonitor">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Time Synchronization">
+				<Tweak name="ForceSynchronizeTime\ForceSynchronizeTime">remove</Tweak>
+				<Tweak name="SynchronizeTime\SynchronizeTime">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Time Zone">
+				<Tweak name="SynchronizeTimeZone\SynchronizeTimeZone">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\TPM">
+				<Tweak name="Tpm-HASCertRetr\Tpm-HASCertRetr">remove</Tweak>
+				<Tweak name="Tpm-Maintenance\Tpm-Maintenance">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\UpdateOrchestrator">
+				<Tweak name="Reboot\Reboot">remove</Tweak>
+				<Tweak name="Refresh Settings\Refresh Settings">remove</Tweak>
+				<Tweak name="Schedule Scan\Schedule Scan">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\UPnP">
+				<Tweak name="UPnPHostConfig\UPnPHostConfig">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\User Profile Service">
+				<Tweak name="HiveUploadTask\HiveUploadTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WCM">
+				<Tweak name="WiFiTask\WiFiTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WDI">
+				<Tweak name="ResolutionHost\ResolutionHost">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Windows Activation Technologies">
+				<Tweak name="ValidationTask\ValidationTask">remove</Tweak>
+				<Tweak name="ValidationTaskDeadline\ValidationTaskDeadline">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Windows Defender">
+				<Tweak name="Windows Defender Cache Maintenance\Windows Defender Cache Maintenance">remove</Tweak>
+				<Tweak name="Windows Defender Cleanup\Windows Defender Cleanup">remove</Tweak>
+				<Tweak name="Windows Defender Scheduled Scan\Windows Defender Scheduled Scan">remove</Tweak>
+				<Tweak name="Windows Defender Verification\Windows Defender Verification">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Windows Error Reporting">
+				<Tweak name="QueueReporting\QueueReporting">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Windows Filtering Platform">
+				<Tweak name="BfeOnServiceStartTypeChange\BfeOnServiceStartTypeChange">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Windows Media Sharing">
+				<Tweak name="UpdateLibrary\UpdateLibrary">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WindowsBackup">
+				<Tweak name="ConfigNotification\ConfigNotification">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WindowsColorSystem">
+				<Tweak name="Calibration Loader\Calibration Loader">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WindowsUpdate">
+				<Tweak name="Automatic App Update\Automatic App Update">remove</Tweak>
+				<Tweak name="Scheduled Start\Scheduled Start">remove</Tweak>
+				<Tweak name="sih\sih">remove</Tweak>
+				<Tweak name="sihboot\sihboot">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Wininet">
+				<Tweak name="CacheTask\CacheTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WOF">
+				<Tweak name="WIM-Hash-Management\WIM-Hash-Management">remove</Tweak>
+				<Tweak name="WIM-Hash-Validation\WIM-Hash-Validation">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Work Folders">
+				<Tweak name="Work Folders Logon Synchronization\Work Folders Logon Synchronization">remove</Tweak>
+				<Tweak name="Work Folders Maintenance Work\Work Folders Maintenance Work">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\Workplace Join">
+				<Tweak name="Automatic-Device-Join\Automatic-Device-Join">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\Windows\WS">
+				<Tweak name="Badge Update\Badge Update">remove</Tweak>
+				<Tweak name="License Validation\License Validation">remove</Tweak>
+				<Tweak name="Sync Licenses\Sync Licenses">remove</Tweak>
+				<Tweak name="WSRefreshBannedAppsListTask\WSRefreshBannedAppsListTask">remove</Tweak>
+				<Tweak name="WSTask\WSTask">remove</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Tree\Microsoft\XblGameSave">
+				<Tweak name="XblGameSaveTask\XblGameSaveTask">remove</Tweak>
+				<Tweak name="XblGameSaveTaskLogon\XblGameSaveTaskLogon">remove</Tweak>
+			</TweakGroup>
+		</ScheduledTasks>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveTrim</Task>
+			<Task>imageFormatWim</Task>
+			<Task>imageOptionsDontBackupPresetLog</Task>
+		</ImageTasks>
+		<AutoIsoFile>NTLite.iso</AutoIsoFile>
+		<AutoIsoLabel>NTLite</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>3</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove></Remove>
+		<Change></Change>
+		<Add></Add>
+	</Execution>
+	<Registry>
+		<File>D:\1703\EVA.reg</File>
+	</Registry>
+</Preset>
