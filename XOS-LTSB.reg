@@ -1,0 +1,662 @@
+Windows Registry Editor Version 5.00
+
+; Many thanks to @AMITXV (AMIT#7692), this reg file mostly based on his regedit file used for EVA.
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options]
+
+[-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
+
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\SendTo]
+
+[-HKEY_LOCAL_MACHINE\Software\Classes\*\shellex\ContextMenuHandlers\ModernSharing]
+
+[-HKEY_CLASSES_ROOT\Microsoft.Website\ShellEx\ContextMenuHandlers\PintoStartScreen]
+
+[-HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
+
+[-HKEY_CLASSES_ROOT\Folder\shell\pintohome]
+
+[-HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags]
+
+; add post install script to run
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce]
+"POST INSTALL"="\"C:\\Windows\\Modules\\POST INSTALL.bat\""
+
+; disable windows update
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"ExcludeWUDriversInQualityUpdate"=dword:00000001
+"WUServer"="http:\\\\neverupdatewindows10.com"
+"WUStatusServer"="http:\\\\neverupdatewindows10.com"
+"UpdateServiceUrlAlternate"="http:\\\\neverupdatewindows10.com"
+"SetProxyBehaviorForUpdateDetection"=dword:00000000
+"SetDisableUXWUAccess"=dword:00000001
+"DoNotConnectToWindowsUpdateInternetLocations"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+"UseWUServer"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"DisableAutomaticRestartSignOn"=dword:00000001
+"PromptOnSecureDesktop"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
+"DisableWindowsConsumerFeatures"=dword:00000001
+
+; enable the legacy photoviewer
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]
+".tif"="PhotoViewer.FileAssoc.Tiff"
+".tiff"="PhotoViewer.FileAssoc.Tiff"
+".bmp"="PhotoViewer.FileAssoc.Tiff"
+".dib"="PhotoViewer.FileAssoc.Tiff"
+".gif"="PhotoViewer.FileAssoc.Tiff"
+".jfif"="PhotoViewer.FileAssoc.Tiff"
+".jpe"="PhotoViewer.FileAssoc.Tiff"
+".jpeg"="PhotoViewer.FileAssoc.Tiff"
+".jpg"="PhotoViewer.FileAssoc.Tiff"
+".jxr"="PhotoViewer.FileAssoc.Tiff"
+".png"="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:0000000a
+"SystemResponsiveness"=dword:0000000a
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
+"MaintenanceDisabled"=dword:00000001
+
+; https://en.wikipedia.org/wiki/Timer_coalescing
+; Timer coalescing is a computer system energy-saving technique that reduces central processing unit (CPU) power consumption by reducing the precision of software timers
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power]
+"HiberbootEnabled"=dword:00000000
+"CoalescingTimerInterval"=dword:00000000
+
+; disable power throttling
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling]
+"PowerThrottlingOff"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"FeatureSettingsOverride"=dword:00000003
+"FeatureSettingsOverrideMask"=dword:00000003
+"DisablePagingExecutive"=dword:00000001
+"EnableCfg"=dword:00000000
+"EnableLowVaAccess"=dword:00000000
+"EnablePrefetcher"=dword:00000000
+"MoveImages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026
+
+; disable fullscreen optimizations
+
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar] 
+"ShowStartupPanel"=dword:00000000 
+"GamePanelStartupTipIndex"=dword:00000003 
+"AllowAutoGameMode"=dword:00000000 
+"AutoGameModeEnabled"=dword:00000000 
+"UseNexusForGameBarEnabled"=dword:00000000
+
+[HKEY_CURRENT_USER\System\GameConfigStore] 
+"GameDVR_Enabled"=dword:00000000 
+"GameDVR_FSEBehaviorMode"=dword:00000002 
+"GameDVR_FSEBehavior"=dword:00000002 
+"GameDVR_HonorUserFSEBehaviorMode"=dword:00000001 
+"GameDVR_DXGIHonorFSEWindowsCompatible"=dword:00000001
+"GameDVR_EFSEFeatureFlags"=dword:00000000 
+"GameDVR_DSEBehavior"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR] 
+"AllowGameDVR"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+"StartupDelayInMSec"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR] 
+"AppCaptureEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR]
+"value"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"HibernateEnabled"=dword:00000000
+"HibernateEnabledDefault"=dword:00000000
+"EnergyEstimationEnabled"=dword:00000000
+"CsEnabled"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"MenuShowDelay"="0"
+"AutoEndTasks"="1"
+"DragFullWindows"="0"
+"UserPreferencesMask"=hex(3):90,12,03,80,11,00,00,00
+"FontSmoothing"="0"
+"MouseWheelRouting"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"AltTabSettings"=dword:00000001
+"HoverSelectDesktops"=dword:00000000
+"link"=hex:00,00,00,00
+"ShellState"=hex(3):24,00,00,00,3E,20,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,01,00,00,00,13,00,00,00,00,00,00,00,32,00,00,00
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC]
+"EnableMtcUvc"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes]
+"ThemeChangesDesktopIcons"=dword:00000000
+"ThemeChangesMousePointers"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisallowShaking"=dword:00000001
+"Start_TrackDocs"=dword:00000000
+"VirtualDesktopTaskbarFilter"=dword:00000000
+"VirtualDesktopAltTabFilter"=dword:00000000
+"TaskbarBadges"=dword:00000000
+"ShowSyncProviderNotifications"=dword:00000000
+"ShowPreviewHandlers"=dword:00000000
+"ShowStatusBar"=dword:00000000
+"TaskbarAnimations"=dword:00000000
+"ListviewShadow"=dword:00000000
+"IconsOnly"=dword:00000001
+"ListviewAlphaSelect"=dword:00000000
+"JointResize"=dword:00000000
+"SnapFill"=dword:00000000
+"SnapAssist"=dword:00000000
+"TaskbarAppsVisibleInTabletMode"=dword:00000001
+"ExtendedUIHoverTime"=dword:00030000
+"Start_TrackProgs"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"NoUseStoreOpenWith"=dword:00000001
+"NoNewAppAlert"=dword:00000001
+"HideRecentlyAddedApps"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
+"SaveZoneInformation"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
+"DontOfferThroughWUAU"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+"DontSendAdditionalData"=dword:00000001
+"LoggingDisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent]
+"DefaultOverrideBehavior"=dword:00000001
+"DefaultConsent"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"DisableNotificationCenter"=dword:00000001
+"DisableSearchBoxSuggestions"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications]
+"NoTileApplicationNotification"=dword:00000001
+"NoCloudApplicationNotification"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000
+"AllowDeviceNameInTelemetry"=dword:00000000
+"MaxTelemetryAllowed"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"EnableTransparency"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableActivityFeed"=dword:00000000
+"PublishUserActivities"=dword:00000000
+"UploadUserActivities"=dword:00000000
+"DisableAcrylicBackgroundOnLogon"=dword:00000001
+"EnableCdp"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"UseDefaultTile"=dword:00000001
+"NoStartMenuMorePrograms"=dword:00000001
+"HideSCANetwork"=dword:00000001
+"AllowOnlineTips"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Shell\USB]
+"NotifyOnUsbErrors"=dword:00000000
+"NotifyOnWeakCharger"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack]
+"DiagTrackStatus"=dword:00000002
+"UploadPermissionReceived"=dword:00000001
+"DiagTrackAuthorization"=dword:00000307
+
+[HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio]
+"UserDuckingPreference"=dword:00000003
+
+; sets the mouse curve so EPP off =/= on
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
+"MouseHoverTime"="0"
+"MouseSensitivity"="10"
+"SmoothMouseXCurve"=hex:00,00,00,00,00,00,00,00,c0,cc,0c,00,00,00,00,00,80,99,\
+  19,00,00,00,00,00,40,66,26,00,00,00,00,00,00,33,33,00,00,00,00,00
+"SmoothMouseYCurve"=hex:00,00,00,00,00,00,00,00,00,00,38,00,00,00,00,00,00,00,\
+  70,00,00,00,00,00,00,00,a8,00,00,00,00,00,00,00,e0,00,00,00,00,00
+  
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings]
+"NOC_GLOBAL_SETTING_ALLOW_TOASTS_ABOVE_LOCK"=dword:00000000
+"NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsMitigation]
+"UserPreference"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules]
+"NumberOfSIUFInPeriod"=dword:00000000
+"PeriodInNanoSeconds"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SilentInstalledAppsEnabled"=dword:00000000
+"SystemPaneSuggestionsEnabled"=dword:00000000
+"SubscribedContent-338388Enabled"=dword:00000000
+"SubscribedContent-338389Enabled"=dword:00000000
+"SubscribedContent-338393Enabled"=dword:00000000
+"SubscribedContent-353698Enabled"=dword:00000000
+"SubscribedContent-353694Enabled"=dword:00000000
+"SubscribedContent-353696Enabled"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CDP]
+"CdpSessionUserAuthzPolicy"=dword:00000000
+"NearShareChannelUserAuthzPolicy"=dword:00000000
+"RomeSdkChannelUserAuthzPolicy"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters]
+"DoNotHoldNicBuffers"=dword:00000001
+"DynamicSendBufferDisable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe]
+"Debugger"="C:\\Windows\\procexp.exe"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance]
+"DisableDiagnosticTracing"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager]
+"ProtectionMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
+"DisableExceptionChainValidation"=dword:00000001
+"KernelSEHOPEnabled"=dword:00000000
+"MitigationOptions"=hex:22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+"MitigationAuditOptions"=hex:22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard]
+"LsaCfgFlags"=dword:00000000
+"ConfigureSystemGuardLaunch"=dword:00000002
+"HypervisorEnforcedCodeIntegrity"=dword:00000000
+"EnableVirtualizationBasedSecurity"=dword:00000000
+"RequirePlatformSecurityFeatures"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Input\Settings]
+"InsightsEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl]
+"CrashDumpEnabled"=dword:00000000
+"AutoReboot"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\sppsvc]
+"DelayedAutoStart"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Memory Cleaner\Settings]
+"LicenseAccepted"="True"
+"EnableClearingOfTheStandbyList"="1"
+"EnableCustomTimerResolution"="0"
+"EnableEmptyingOfTheWorkingSet"="1"
+"HotkeyModifierKey"="None"
+"HotkeyToCleanMemory"="F10"
+"StartMemoryCleanerOnSystemStartup"="0"
+"StartMinimized"="1"
+"StartTimerResolutionAutomatically"="1"
+"TimerEnabled"="1"
+"TimerPollingInterval"="10 sec"
+"DesiredTimerResolution"="5000"
+
+[HKEY_CURRENT_USER\Control Panel\TimeDate]
+"DstNotification"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\Parameters]
+"Type"="NTP"
+
+; does not affect keyboard latency, this feature is genuinely annoying while typing in general
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="0"
+"KeyboardDelay"="0"
+"KeyboardSpeed"="31"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputPersonalization]
+"RestrictImplicitInkCollection"=dword:00000001
+"RestrictImplicitTextCollection"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore]
+"HarvestContacts"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Personalization\Settings]
+"AcceptedPrivacyPolicy"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Search\Preferences]
+"WholeFileSystem"=dword:00000001
+"SystemFolders"=dword:00000000
+
+; disable language bar
+
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Layout Hotkey"="3"
+"Language Hotkey"="3"
+"Hotkey"="3"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\CTF\LangBar]
+"Transparency"=dword:000000ff
+"Label"=dword:00000000
+"ExtraIconsOnMinimized"=dword:00000000
+"ShowStatus"=dword:00000003
+
+; disable Fault Tolerant Heap
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\FTH]
+"Enabled"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+"VisualFXSetting"=dword:00000002
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"EnableAeroPeek"=dword:00000000
+"AlwaysHibernateThumbnails"=dword:00000000
+
+; silent install sysinternals applications
+
+[HKEY_CURRENT_USER\SOFTWARE\Sysinternals\Process Explorer]
+"EulaAccepted"=dword:00000001
+"ConfirmKill"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Sysinternals\AutoRuns]
+"EulaAccepted"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Sysinternals\PsSuspend]
+"EulaAccepted"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Sysinternals\Strings]
+"EulaAccepted"=dword:00000001
+
+; set .ps1 file types to open with powershell by default
+
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Open\Command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NDIS\Parameters]
+"TrackNblOwner"=dword:00000000
+"DefaultPnPCapabilities"=dword:00000018
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+
+; disable the reboot promt for msconfig
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Shared Tools\MsConfig]
+"NoRebootUI"=dword:00000001
+
+; disable the save promt in snippingtool
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\TabletPC\Snipping Tool]
+"PromptToSave"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"CachedLogonsCount"="0"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager]
+"EnablePeriodicBackup"=dword:00000000
+
+; disable search indexing globally
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WSearch]
+"Start"=dword:00000004
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
+"ConvertibleSlateModePromptPreference"=dword:00000000
+"SignInMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched]
+"NonBestEffortLimit"=dword:00000000
+"TimerResolution"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy]
+"TailoredExperiencesWithDiagnosticDataEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo]
+"DisabledByGroupPolicy"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform]
+"NoGenTicket"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy]
+"LetAppsRunInBackground"=dword:00000002
+"LetAppsAccessNotifications"=dword:00000002
+"LetAppsAccessRadios"=dword:00000002
+"LetAppsGetDiagnosticInfo"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\WcmSvc\Tethering]
+"RemoteStartupDisabled"=dword:00000001
+
+[HKEY_CURRENT_USER\Control Panel\Cursors]
+"ContactVisualization"=dword:00000000
+"GestureVisualization"=dword:00000000
+
+; disable firewall
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
+"DisableNotifications"=dword:00000001
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
+"DisableNotifications"=dword:00000001
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\NcdAutoSetup\Private]
+"AutoSetup"=dword:00000000
+
+; disable lmhosts
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters]
+"EnableLMHOSTS"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+"AutoShareWks"=dword:00000000
+
+; remove print from the context menu
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\batfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\cmdfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\docxfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\fonfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\htmlfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inifile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\JSEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\otffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\pfmfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\regfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\rtffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttcfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\txtfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\WSFFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+; disable advertising info
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo]
+"Enabled"=dword:00000000
+
+; rest is made by imribiy
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SystemUsesLightTheme"=dword:00000000
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDTC\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\adsi\tracing]
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DCLocator\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ldap\tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wbem\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WBEM\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\Tracing]
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\WMI\Autologger]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Tracing]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"LaunchTo"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowFrequent"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"HideDrivesWithNoMedia"=dword:00000000
+"SharingWizardOn"=dword:00000000
+
+
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule]
+"ErrorControl"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dhcp]
+"DependOnService"=hex(7):4e,00,53,00,49,00,00,00,41,00,66,00,64,00,00,00,00,00
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dhcp\Security]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache]
+"DependOnService"=hex(7):6e,00,73,00,69,00,00,00,00,00
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Security]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance]
+"DisableDiagnosticTracing"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\GameOverlay]
+"Path"=""
