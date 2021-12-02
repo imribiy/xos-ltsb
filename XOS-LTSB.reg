@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-; Many thanks to @AMITXV (AMIT#7692), this reg file is based on his regedit file used for EVA.
+; Much thanks to @AMITXV (AMIT#7692), this reg file is based on his regedit file used for EVA.
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options]
 
