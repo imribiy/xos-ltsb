@@ -2,8 +2,6 @@ Windows Registry Editor Version 5.00
 
 ; Many thanks to @AMITXV (AMIT#7692), this reg file mostly based on his regedit file used for EVA.
 
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options]
-
 [-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
 
 [-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
