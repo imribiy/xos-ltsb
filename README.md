@@ -5,3 +5,5 @@ Always have a backup image in your USB stick. I don't give further support about
 If you complain anything about the ISO, feel free to modify according to your taste. It's open source.
 
 # 1607 version of Windows10 doesn't work with GTX16xx series and RTX cards!!!
+
+Read release notes before downloading to see what is missing on the ISO.
